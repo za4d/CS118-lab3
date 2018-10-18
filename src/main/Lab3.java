@@ -123,9 +123,9 @@ public class Lab3
         {
           boolean[] x = segments(digits[i]);
           int bool = 0;
-          for (i2 = 0, i2 < 7, i2++)
+          for (int i2 = 0; i2 < 7; i2++)
           {
-            bool
+
           }
         }
         return results;
