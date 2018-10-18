@@ -26,15 +26,36 @@ public class Lab3 {
 
     // this method should return the median of the three integers
     public int median(int a, int b, int c) {
-        return a;
+      return max(max(min(a,b),min(a,c)),max(min(a,c),min(c,b)));
     }
 
     // this method should calculate how much tax someone with the
     // specified income should pay according to the tax rules
     // given in the lab sheet
     public double taxToPay(int income) {
-        return 0; // this is everyone's dream
+      float tax;
+      if (income < 11850){
+        tax = 0f;
+      } else if (income < 46350) {
+        tax += 0.2f(income-11850);
+      } else if (income < 150000) {
+        tax = 6900+0.4f(income-46350);
+      } else if (income > 150000) {
+        tax = 41460+0.45f(income-150000);
+      }
+        return tax; // this is everyone's dream
     }
+    /*    public double taxToPay(int income) {
+      float tax = 0f;
+      if (income > 11850){
+        tax += 0.2f*(46350-income-11850);
+      } else if (income > 46350) {
+        tax += 0.4f(150000-income-46350)f;
+      } else if (income > 150000) {
+        tax += 0.45f(income-150000)f;
+      }
+        return tax; // this is everyone's dream
+    }*/
 
     // given a digit (0-9), this method should return an array of bits
     // (represented as booleans) which indicate which
