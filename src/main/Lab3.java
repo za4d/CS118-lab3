@@ -8,12 +8,20 @@ public class Lab3 {
 
     // this method should return the smaller of the two integers
     public int min(int x, int y) {
+      if (x <= y){
         return x;
+      } else {
+        return y;
+      }
     }
 
     // this method should return the larger of the two integers
     public int max(int x, int y) {
-        return x;
+        if (x >= y){
+          return x;
+        } else {
+          return y;
+        }
     }
 
     // this method should return the median of the three integers
